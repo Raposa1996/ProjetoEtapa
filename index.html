@@ -70,14 +70,15 @@
 
   <!-- Formulário de Inscrição -->
   <section class="bg-gray-800 p-8 rounded-lg mx-6">
-    <!-- Ficha de Inscrição da Escola -->
     <h2 class="text-xl font-bold text-center text-purple-400">Inscrição - Dados da Escola</h2>
     <form class="grid grid-cols-2 gap-4 mt-6">
       <input type="text" placeholder="Nome da Escola" class="p-2 rounded bg-gray-700 border border-gray-600">
-      <input type="text" placeholder="Endereço da Escola" class="p-2 rounded bg-gray-700 border border-gray-600">
-      <input type="text" placeholder="Cidade" class="p-2 rounded bg-gray-700 border border-gray-600">
-      <input type="text" placeholder="Estado" class="p-2 rounded bg-gray-700 border border-gray-600">
-      <input type="text" placeholder="CEP" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" id="rua" placeholder="Endereço da Escola" class="p-2 rounded bg-gray-700 border border-gray-600" disabled>
+      <input type="text" id="cidade" placeholder="Cidade" class="p-2 rounded bg-gray-700 border border-gray-600" disabled>
+      <input type="text" id="uf" placeholder="Estado" class="p-2 rounded bg-gray-700 border border-gray-600" disabled>
+      <input type="text" id="cep" placeholder="CEP" class="p-2 rounded bg-gray-700 border border-gray-600" onblur="buscarCep()">
+      <input type="text" id="bairro" placeholder="Bairro" class="p-2 rounded bg-gray-700 border border-gray-600" disabled>
+      <input type="text" id="complemento" placeholder="Complemento" class="p-2 rounded bg-gray-700 border border-gray-600" disabled>
       <input type="text" placeholder="Telefone da Escola" class="p-2 rounded bg-gray-700 border border-gray-600">
     </form>
   
@@ -137,5 +138,48 @@
       </div>
     </div>
   </section>
+   <script>
+    async function buscarCep() {
+        const cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+        if (cep.length === 8) {
+          try {
+            // Desabilita os campos enquanto busca os dados
+            document.getElementById('rua').value = "Buscando...";
+            document.getElementById('bairro').value = "Buscando...";
+            document.getElementById('complemento').value = "Buscando...";
+            document.getElementById('cidade').value = "Buscando...";
+            document.getElementById('uf').value = "Buscando...";
+            
+            const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+            const data = await response.json();
+            
+            if (data.erro) {
+              alert("CEP não encontrado!");
+              return;
+            }
+
+            // Preenche os campos automaticamente
+            document.getElementById('rua').value = data.logradouro;
+            document.getElementById('bairro').value = data.bairro;
+            document.getElementById('complemento').value = data.complemento || '';
+            document.getElementById('cidade').value = data.localidade;
+            document.getElementById('uf').value = data.uf;
+
+            // Habilita os campos preenchidos
+            document.getElementById('rua').disabled = false;
+            document.getElementById('bairro').disabled = false;
+            document.getElementById('complemento').disabled = false;
+            document.getElementById('cidade').disabled = false;
+            document.getElementById('uf').disabled = false;
+
+          } catch (error) {
+            alert("Erro ao buscar o CEP. Tente novamente.");
+          }
+        } else {
+          alert("Por favor, insira um CEP válido com 8 dígitos.");
+        }
+    }
+  </script>
 </body>
 </html>
