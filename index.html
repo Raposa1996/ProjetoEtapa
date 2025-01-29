@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Etapa</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Roboto:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Anton&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  
+  
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 ">
+    <img src="./imagens/img1.png" alt="Sistema Etapa" class="h-14">
+
+    <ul class="flex gap-4">
+        <li>
+          <a href="#" class="audiowide-regular inline-block px-4 py-2 border-2 border-purple-500 text-blue-500 rounded-lg hover:bg-purple-500 hover:text-white transition">
+            Início
+          </a>
+        </li>
+        <li>
+          <a href="#" class="audiowide-regular inline-block px-4 py-2 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-purple-500 hover:text-white transition">
+            Programação
+          </a>
+        </li>
+        <li>
+          <a href="#" class="audiowide-regular inline-block px-4 py-2 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-purple-500 hover:text-white transition">
+            FAQ
+          </a>
+        </li>
+      </ul>
+      
+      
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative text-center py-20 bg-cover bg-center" style="background-image: url('/path-to-space-image.jpg');">
+    <h1 class="audiowide-regular text-7xl">EXPLORE</h1>
+<h2 class="audiowide-regular text-5xl">UM UNIVERSO DE CONHECIMENTO</h2>
+
+
+
+<p class="audiowide-regular mt-2" style="font-family: 'Audiowide', sans-serif; text-shadow: 2px 2px 4px yellow; font-size: 2.5rem;">
+    Evento exclusivo para mentes curiosas
+  </p>
+  
+
+<button class="audiowide-regular mt-6 bg-purple-600 text-yellow-500 px-6 py-3 rounded-lg hover:bg-purple-500 transition">
+  Inscreva-se
+</button>
+
+  
+  
+
+  <!-- Sobre o Evento -->
+  <section class="text-center py-10 px-6">
+    <h2 class="text-3xl text-purple-400">
+        Sobre o Evento
+      </h2>
+    <p class="max-w-2xl mx-auto mt-4 text-gray-300">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </section>
+
+  <!-- Formulário de Inscrição -->
+  <section class="bg-gray-800 p-8 rounded-lg mx-6">
+    <!-- Ficha de Inscrição da Escola -->
+    <h2 class="text-xl font-bold text-center text-purple-400">Inscrição - Dados da Escola</h2>
+    <form class="grid grid-cols-2 gap-4 mt-6">
+      <input type="text" placeholder="Nome da Escola" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="Endereço da Escola" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="Cidade" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="Estado" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="CEP" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="Telefone da Escola" class="p-2 rounded bg-gray-700 border border-gray-600">
+    </form>
+  
+    <!-- Ficha de Inscrição do Aluno -->
+    <h2 class="text-xl font-bold text-center text-purple-400">Inscrição - Dados do Aluno</h2>
+    <form class="grid grid-cols-2 gap-4 mt-6">
+      <input type="text" placeholder="Nome do Aluno" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="RG" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="CPF" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="date" placeholder="Data de Nascimento" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="Nome do Responsável" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="Telefone do Responsável" class="p-2 rounded bg-gray-700 border border-gray-600">
+    </form>
+  
+    <!-- Ficha de Inscrição do Acompanhante -->
+    <h2 class="text-xl font-bold text-center text-purple-400">Inscrição - Dados do Acompanhante</h2>
+    <form class="grid grid-cols-2 gap-4 mt-6">
+      <input type="text" placeholder="Nome do Acompanhante" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="RG do Acompanhante" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="CPF do Acompanhante" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="date" placeholder="Data de Nascimento do Acompanhante" class="p-2 rounded bg-gray-700 border border-gray-600">
+      <input type="text" placeholder="Telefone do Acompanhante" class="p-2 rounded bg-gray-700 border border-gray-600">
+    </form>
+  
+    <!-- Botão de Envio -->
+    <div class="text-center mt-6">
+      <button class="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-400 transition">
+        Enviar Inscrição
+      </button>
+    </div>
+  </section>
+  
+
+  <!-- Palestrantes -->
+  <section class="py-10 text-center">
+    <h2 class="text-3xl font-bold text-purple-400">Palestrantes</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6 px-6">
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <img src="./imagens/img2.jpeg" alt="Palestrante 1" class="w-full h-40 object-cover rounded-lg">
+        <h3 class="text-lg font-bold mt-2">Palestrante 1</h3>
+        <p class="text-gray-300">Descrição breve sobre o palestrante.</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <img src="./imagens/abc.jpg" alt="Palestrante 2" class="w-full h-40 object-cover rounded-lg">
+        <h3 class="text-lg font-bold mt-2">Palestrante 2</h3>
+        <p class="text-gray-300">Descrição breve sobre o palestrante.</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <img src="./imagens/ssss.jpg" class="w-full h-40 object-cover rounded-lg">
+        <h3 class="text-lg font-bold mt-2">Palestrante 3</h3>
+        <p class="text-gray-300">Descrição breve sobre o palestrante.</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <img src="./imagens/aa.jpg" alt="Palestrante 4" class="w-full h-40 object-cover rounded-lg">
+        <h3 class="text-lg font-bold mt-2">Palestrante 4</h3>
+        <p class="text-gray-300">Descrição breve sobre o palestrante.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
